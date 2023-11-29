@@ -1,0 +1,57 @@
+@import "../abstracts/_colors";
+@import "../abstracts/_mixins";
+
+.Header {
+  align-items: center;
+  background-color: $primary-color;
+  border-bottom: 4px solid $text-icons;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  strong {
+    margin-right: 1rem;
+  }
+
+  .buttons-container {
+    display: flex;
+  }
+
+  .user-profile {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+  
+    img {
+      border-radius: 50%;
+      height: 35px;
+      margin-right: 1rem;
+      width: 35px;
+    }
+  }
+  
+  .settings-icon {
+    @include button($accent-color, 0, fit-content);
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .Header {
+    .user-profile {
+      display: none;
+    }
+  
+    .score-container {
+      @include button(transparent, 0, fit-content);
+      flex-grow: 2;
+      justify-content: space-between;
+      margin-right: 1rem;
+    }
+  }
+}

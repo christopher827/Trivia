@@ -1,0 +1,48 @@
+@import '../abstracts/_gradients';
+@import '../abstracts/_mixins';
+
+.Ranking-container {
+  align-items: center;
+  background-image: $gradient-three;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 2.5rem;
+}
+
+.Ranking-picture {
+  margin-bottom: 2.5rem;
+  object-fit: contain;
+
+  width: 300px;
+  z-index: 1;
+}
+
+.Ranking-noranking {
+  margin-bottom: 1rem;
+}
+
+.Ranking {
+  @include box(center);
+  max-width: 90vw;
+  z-index: 1;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ol {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .Ranking-container {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+}

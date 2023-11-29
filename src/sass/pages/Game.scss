@@ -1,0 +1,26 @@
+@import '../abstracts/_gradients';
+
+.Game {
+  align-items: center;
+  background-image: $gradient-two;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.Game-background-forms {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  width: 100vw;
+  z-index: 0;
+}
+
+@media screen and (max-height: 800px) {
+  .Game {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+}
