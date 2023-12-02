@@ -99,8 +99,7 @@ function LoginForm({ history }: ILoginForm) {
           Christopher Oche
         </a>
       </p>
-    </form>
-    
+    </form>    
   );
 }
 export default LoginForm;
