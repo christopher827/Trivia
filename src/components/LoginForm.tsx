@@ -100,6 +100,7 @@ function LoginForm({ history }: ILoginForm) {
         </a>
       </p>
     </form>
+    
   );
 }
 export default LoginForm;
