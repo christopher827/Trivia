@@ -59,10 +59,10 @@ function LoginForm({ history }: ILoginForm) {
 
   return (
     <form className="LoginForm" onSubmit={handleSubmit}>
-  {redirect && <Redirect to="/game" />}
-  <img className="LoginForm__logo" src={trivia} alt="Trivia" />
-  <h1>to play</h1>
-  <label htmlFor="input-player-name">
+      {redirect && <Redirect to="/game" />}
+      <img className="LoginForm__logo" src={trivia} alt="Trivia" />
+      <h1>to play</h1>
+      <label htmlFor="input-player-name">
     <input
       id="input-player-name"
       name="name"
@@ -75,7 +75,7 @@ function LoginForm({ history }: ILoginForm) {
       <RiUser3Fill />
     </span>
   </label>
-  <label htmlFor="input-gravatar-email">
+      <label htmlFor="input-gravatar-email">
     <input
       id="input-gravatar-email"
       name="gravatarEmail"
@@ -88,18 +88,18 @@ function LoginForm({ history }: ILoginForm) {
       <MdEmail />
     </span>
   </label>
-  <button type="submit" disabled={handleDisableButton()}>
+      <button type="submit" disabled={handleDisableButton()}>
     <RiGameFill />
     <span>Play</span>
   </button>
-  <SettingsButton history={history} />
-  <p>
+      <SettingsButton history={history} />
+      <p>
     {/* Developed by */}
     <a target="_blank" rel="noreferrer" href="https://github.com/christopher827">
       Christopher Oche
     </a>
   </p>
-</form>
+    </form>
 
   );
 }
