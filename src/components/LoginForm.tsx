@@ -59,47 +59,52 @@ function LoginForm({ history }: ILoginForm) {
 
   return (
     <form className="LoginForm" onSubmit={handleSubmit}>
-  {redirect && <Redirect to="/game" />}
-  <img className="LoginForm__logo" src={trivia} alt="Trivia" />
-  <h1>to play</h1>
-  <label htmlFor="input-player-name">
-    <input
-      id="input-player-name"
-      name="name"
-      type="text"
-      placeholder="Enter your name"
-      value={name}
-      onChange={handleChange}
-    />
-    <span className="LoginForm__icon">
-      <RiUser3Fill />
-    </span>
-  </label>
-  <label htmlFor="input-gravatar-email">
-    <input
-      id="input-gravatar-email"
-      name="gravatarEmail"
-      type="email"
-      placeholder="Enter your email"
-      value={gravatarEmail}
-      onChange={handleChange}
-    />
-    <span className="LoginForm__icon">
-      <MdEmail />
-    </span>
-  </label>
-  <button type="submit" disabled={handleDisableButton()}>
-    <RiGameFill />
-    <span>Play</span>
-  </button>
-  <SettingsButton history={history} />
-  <p>
-    <a target="_blank" rel="noreferrer" href="https://github.com/christopher827">
-      Christopher Oche
-    </a>
-  </p>
+      {redirect && <Redirect to="/game" />}
+      <img className="LoginForm__logo" src={trivia} alt="Trivia" />
+      <h1>to play</h1>
+      <label htmlFor="input-player-name">
+        <input
+          id="input-player-name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={handleChange}
+        />
+        <span className="LoginForm__icon">
+          <RiUser3Fill />
+        </span>
+      </label>
+      <label htmlFor="input-gravatar-email">
+        <input
+          id="input-gravatar-email"
+          name="gravatarEmail"
+          type="email"
+          placeholder="Enter your email"
+          value={gravatarEmail}
+          onChange={handleChange}
+        />
+        <span className="LoginForm__icon">
+          <MdEmail />
+        </span>
+      </label>
+      <button type="submit" disabled={handleDisableButton()}>
+        <RiGameFill />
+        <span>Play</span>
+      </button>
+      <SettingsButton history={history} />
+      <p>
+        Powered by
+        <a href="https://opentdb.com/">Open Trivia Database</a>
+      </p>
+      <p>
+        Some SVG Backgrounds by
+        <a target="_blank" rel="noreferrer" href="https://bgjar.com">
+          BGJar
+        </a>
+      </p>
     </form>
-
   );
 }
+
 export default LoginForm;
