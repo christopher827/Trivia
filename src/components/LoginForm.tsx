@@ -58,7 +58,7 @@ function LoginForm({ history }: ILoginForm) {
   };
 
   return (
-<form className="LoginForm" onSubmit={handleSubmit}>
+    <form className="LoginForm" onSubmit={handleSubmit}>
   {redirect && <Redirect to="/game" />}
   <img className="LoginForm__logo" src={trivia} alt="Trivia" />
   <h1>to play</h1>
